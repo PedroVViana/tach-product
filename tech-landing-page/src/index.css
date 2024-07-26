@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adiciona padding lateral para todo o conteúdo do site */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) { /* Para dispositivos com largura mínima de 640px */
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Para dispositivos com largura mínima de 1024px */
+    .container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  
+
+/* Adiciona a classe de carrossel para garantir a responsividade */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 200px; /* Ajuste conforme necessário */
+    flex: 0 0 auto;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-button-left {
+    left: 0px;
+  }
+  
+  .carousel-button-right {
+    right: -10px;
+  }
+  
+  .parallax {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
