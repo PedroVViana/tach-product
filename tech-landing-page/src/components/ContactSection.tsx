@@ -1,4 +1,5 @@
 import React from 'react';
+import ctaImage from '../assets/images/cta.jpg'; // Ajuste o caminho conforme necessário
 
 const Contact: React.FC = () => {
   return (
@@ -6,11 +7,11 @@ const Contact: React.FC = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-3xl text-white font-bold mb-6">Contact</h2>
         <p className="mb-8 text-white text-lg">
-        Want to know more about our products? Contact us or explore our products section.
+          Want to know more about our products? Contact us or explore our products section.
         </p>
         <div 
           className="relative bg-cover bg-center text-white py-16 px-6 md:px-12 lg:px-24 mb-8 rounded-lg parallax" 
-          style={{ backgroundImage: 'url(/src/assets/images/cta-bg.jpg)' }} // Substitua pelo caminho da sua imagem
+          style={{ backgroundImage: `url(${ctaImage})` }} // Use a imagem importada
         >
           <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div> {/* Overlay para melhor contraste */}
           <div className="relative z-10">
@@ -50,7 +51,7 @@ const Contact: React.FC = () => {
             </div>
             <div className="mb-4">
               <label className="block text-left text-white text-sm font-bold mb-2" htmlFor="message">
-              Message
+                Message
               </label>
               <textarea 
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline" 
